@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+[filter "lfs"]
+	smudge = git-lfs smudge --skip -- %f
+	process = git-lfs filter-process --skip
+[remote "cm"]
+	url = https://github.com/CyanogenMod/android_vendor_qcom_opensource_time-services
+	review = review.cyanogenmod.org
+	projectname = android_vendor_qcom_opensource_time-services
+	fetch = +refs/heads/*:refs/remotes/cm/*

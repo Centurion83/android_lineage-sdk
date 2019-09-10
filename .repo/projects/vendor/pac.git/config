@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+[filter "lfs"]
+	smudge = git-lfs smudge --skip -- %f
+	process = git-lfs filter-process --skip
+[remote "pac"]
+	url = https://github.com/PAC-ROM/android_vendor_pac
+	review = review.pac-rom.com
+	projectname = android_vendor_pac
+	fetch = +refs/heads/*:refs/remotes/pac/*
